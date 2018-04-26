@@ -63,34 +63,34 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <NMakeBuildCommandLine>wsl ./scripts/build.sh</NMakeBuildCommandLine>
-    <NMakeCleanCommandLine>
-    </NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>wsl ./scripts/build.sh</NMakeReBuildCommandLine>
+    <NMakeBuildCommandLine>./scripts/build.bat</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>rmdir .\build /S /q
+rmdir .\build.emscripten /S /q</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>%windir%\sysnative\\wsl.exe ./scripts/build.sh</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeBuildCommandLine>wsl ./scripts/build.sh</NMakeBuildCommandLine>
-    <NMakeCleanCommandLine>
-    </NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>wsl ./scripts/build.sh</NMakeReBuildCommandLine>
+    <NMakeBuildCommandLine>./scripts/build.bat</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>rmdir .\build /S /q
+rmdir .\build.emscripten /S /q</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>%windir%\sysnative\\wsl.exe ./scripts/build.sh</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <NMakeBuildCommandLine>wsl ./scripts/build.sh</NMakeBuildCommandLine>
-    <NMakeCleanCommandLine>
-    </NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>wsl ./scripts/build.sh</NMakeReBuildCommandLine>
+    <NMakeBuildCommandLine>./scripts/build.bat</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>rmdir .\build /S /q
+rmdir .\build.emscripten /S /q</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>%windir%\sysnative\\wsl.exe ./scripts/build.sh</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <NMakeBuildCommandLine>wsl ./scripts/build.sh</NMakeBuildCommandLine>
-    <NMakeCleanCommandLine>
-    </NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>wsl ./scripts/build.sh</NMakeReBuildCommandLine>
+    <NMakeBuildCommandLine>./scripts/build.bat</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>rmdir .\build /S /q
+rmdir .\build.emscripten /S /q</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>%windir%\sysnative\\wsl.exe ./scripts/build.sh</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
   </PropertyGroup>
