@@ -17,6 +17,7 @@
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
     <Text Include="src\CMakeLists.txt" />
+    <Text Include="assets\CMakeList.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
@@ -25,6 +26,8 @@
       <Filter>Source Files</Filter>
     </None>
     <None Include="scripts\build.sh" />
+    <None Include="publics\index.css" />
+    <None Include="publics\emc.js" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CppWeb.cpp">
@@ -35,5 +38,10 @@
     <ClInclude Include="include\CppWeb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\test.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -17,7 +17,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_subdirectory ("src")
 target_include_directories(CppWeb PUBLIC include)
 
-set_target_properties(CppWeb PROPERTIES LINK_FLAGS "-s USE_SDL=2 -s LEGACY_GL_EMULATION=1 -s DEMANGLE_SUPPORT=1 --bind")
-set_target_properties(CppWeb PROPERTIES COMPILE_FLAGS "-s USE_SDL=2 -s LEGACY_GL_EMULATION=1")
+set_target_properties(CppWeb PROPERTIES LINK_FLAGS "-s USE_SDL=2 -s USE_SDL_IMAGE=2 -s USE_LIBPNG=1 -s SDL2_IMAGE_FORMATS='[\"png\"]' -s DEMANGLE_SUPPORT=1 --preload-file assets --bind")
+set_target_properties(CppWeb PROPERTIES COMPILE_FLAGS "-s USE_SDL=2 -s USE_SDL_IMAGE=2 -s USE_LIBPNG=1 -s SDL2_IMAGE_FORMATS='[\"png\"]' --preload-file assets")
 
+file(INSTALL assets DESTINATION src)
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/publics/ DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/build.emscripten)

@@ -101,11 +101,14 @@ rmdir .\build.emscripten /S /q</NMakeCleanCommandLine>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="assets\CMakeList.txt" />
     <Text Include="CMakeLists.txt" />
     <Text Include="src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="publics\emc.js" />
+    <None Include="publics\index.css" />
     <None Include="publics\index.html" />
     <None Include="scripts\build.bat" />
     <None Include="scripts\build.sh" />
@@ -115,6 +118,9 @@ rmdir .\build.emscripten /S /q</NMakeCleanCommandLine>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\CppWeb.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\test.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

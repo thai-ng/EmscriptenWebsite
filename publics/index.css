@@ -1,12 +1,18 @@
 body {
     font-family: arial;
-    margin: 0;
-    padding: none;
-  }
+    margin: 2em auto;
+    padding: 1em;
+    font-size: 16px;
+    color: #454545;
+    line-height: 1.4;
+    text-align: justify;
+    max-width: 1000px;
+    background-color: #fefefe;
+}
 
   .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
   div.emscripten { text-align: center; }      
-  div.emscripten_border { border: 1px solid black; }
+  div.emscripten_border { }
   /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
   canvas.emscripten { border: 0px none; background-color: black; }
 
