@@ -17,6 +17,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_subdirectory ("src")
 target_include_directories(CppWeb PUBLIC include)
 
-set_target_properties(CppWeb PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 --bind")
+set_target_properties(CppWeb PROPERTIES LINK_FLAGS "-s USE_SDL=2 -s LEGACY_GL_EMULATION=1 -s DEMANGLE_SUPPORT=1 --bind")
+set_target_properties(CppWeb PROPERTIES COMPILE_FLAGS "-s USE_SDL=2 -s LEGACY_GL_EMULATION=1")
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/publics/ DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/build.emscripten)
